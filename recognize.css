@@ -1,0 +1,12 @@
+.content {
+  color: #666;
+  display: flex;
+  justify-content: center;
+  margin-top: 60px;
+  flex-direction: column;
+  max-width: 600px;
+}
+.label {
+  font-weight: 900;
+  font-size: 1.3rem;
+}
