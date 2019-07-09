@@ -4,4 +4,4 @@ A simple textarea that recognizes your speech when you click the button and copy
 
 ## font-awesome
 
-Downloaded font-awesome 5. See link of css in head.
+Using font-awesome 5 from downloaded zip folder. See link of css in head.
