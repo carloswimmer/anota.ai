@@ -1,5 +1,19 @@
 body {
-  font-family: 'Montserrat', sans-serif;
+  height: 100vh;
+  font-family: 'Montserrat', sans-serif; 
+}
+header {
+  height: 78px;
+  width: 100vw;
+  background-color: #333333;
+  color: silver;
+  font-size: 2em;
+  padding: 15px;
+}
+section {
+  height: calc(100% - 78px);
+  background-image: linear-gradient(to bottom right, white, rgb(178, 192, 185));
+  padding-top: 8.5%;
 }
 footer {
   display: flex;
@@ -26,11 +40,10 @@ button {
   color: #666;
   display: flex;
   justify-content: center;
-  margin-top: 60px;
   flex-direction: column;
   max-width: 600px;
 }
 .label {
-  font-weight: 900;
-  font-size: 1.3rem;
+  font-weight: 600;
+  font-size: 1.6rem;
 }
