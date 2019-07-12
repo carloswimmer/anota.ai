@@ -41,13 +41,13 @@ function toggleStartStop () {
   if (recognizing) {
     recognition.stop()
     reset()
-  } else {
-    recognition.start ()
-    recognizing = true
-    button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
-    button.classList.toggle('btn-danger')
-    notification.style.opacity = '0'
+    return
   }
+  recognition.start ()
+  recognizing = true
+  button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
+  button.classList.toggle('btn-danger')
+  notification.style.opacity = '0'
 }
 
 function showAlert (type, message) {
@@ -58,11 +58,13 @@ function showAlert (type, message) {
 }
 
 function clearDisplay () {
+  if (recognizing) toggleStartStop()
   display.value = ''
   notification.style.opacity = '0'
 }
 
 function copy () {
+  if (recognizing) toggleStartStop()
   if (display.value) {
     let element = buildElement(display.value)
     element =  hideElement(element)
