@@ -10,9 +10,7 @@ window.onload = function () {
     letsTakeNote()
     return
   }
-  notification.classList.toggle('alert-danger')
-  notification.style.opacity = '1'
-  notification.innerHTML = 'Esse navegador não tem reconhecimento de voz'
+  showAlert('danger', 'Esse navegador não tem reconhecimento de voz')
   var controls = document.querySelectorAll('button')
   controls.forEach(item => item.setAttribute('disabled', true))
 }
@@ -48,7 +46,15 @@ function toggleStartStop () {
     recognizing = true
     button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
     button.classList.toggle('btn-danger')
+    notification.style.opacity = '0'
   }
+}
+
+function showAlert (type, message) {
+  notification.classList.remove(...['alert-success', 'alert-warning', 'alert-danger'])
+  notification.classList.add(`alert-${type}`)
+  notification.style.opacity = '1'
+  notification.innerHTML = message
 }
 
 function clearDisplay () {
@@ -57,11 +63,15 @@ function clearDisplay () {
 }
 
 function copy () {
-  let element = buildElement(display.value)
-  element =  hideElement(element)
-  includeSelectCopy(element)
-  destroyElement(element)
-  notification.style.opacity = '1'
+  if (display.value) {
+    let element = buildElement(display.value)
+    element =  hideElement(element)
+    includeSelectCopy(element)
+    destroyElement(element)
+    showAlert('success', 'Sucesso! Texto copiado para a área de trabalho.')
+    return
+  }
+  showAlert('warning', 'Clique no microfone e diga algo para ser copiado')
 }
 
 function buildElement (statement) {

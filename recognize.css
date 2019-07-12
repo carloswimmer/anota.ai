@@ -47,7 +47,8 @@ button {
   font-weight: 600;
   font-size: 1.6rem;
 }
-.alert-success {
+.alert {
+  text-align: center;
   opacity: 0;
   transition: opacity 0.3s;
 }
