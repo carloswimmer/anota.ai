@@ -3,17 +3,17 @@ body {
   font-family: 'Montserrat', sans-serif; 
 }
 header {
-  height: 78px;
+  min-height: 78px;
   width: 100vw;
   background-color: #333333;
   color: silver;
   font-size: 2em;
-  padding: 15px;
+  padding: 15px 20px;
 }
 section {
   height: calc(100% - 78px);
   background-image: linear-gradient(to bottom right, white, rgb(178, 192, 185));
-  padding-top: 8.5%;
+  padding-top: 27px;
 }
 footer {
   display: flex;
@@ -46,4 +46,8 @@ button {
 .label {
   font-weight: 600;
   font-size: 1.6rem;
+}
+.alert-success {
+  opacity: 0;
+  transition: opacity 0.3s;
 }
