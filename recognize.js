@@ -1,6 +1,7 @@
 window.SpeechRecognition = window.webkitSpeechRecognition ||
   window.SpeechRecognition
 var notification = document.querySelector('.alert')
+var information = document.querySelector('.information')
 var recognizing
 var recognition = {}
 
@@ -97,4 +98,12 @@ function includeSelectCopy (element) {
 
 function destroyElement (element) {
   document.body.removeChild(element)
+}
+
+function showInformation () {
+  information.style.opacity = '.8'
+}
+
+function hideInformation () {
+  information.style.opacity = '0'
 }

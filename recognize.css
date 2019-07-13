@@ -52,3 +52,36 @@ button {
   opacity: 0;
   transition: opacity 0.3s;
 }
+.to-the-right {
+  float: right;
+  display: flex;
+  align-items: center;
+  min-height: 48px;
+}
+.information {
+  position: absolute;
+  top: 87px;
+  right: 10px;
+  background-color: #333333;
+  border-radius: 6px;
+  color: silver;
+  font-size: 0.5em;
+  padding: 10px;
+  opacity: 0;
+  transition: opacity .3s;
+}
+.information::after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  margin-right: 27px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: transparent transparent #333333 transparent;
+}
+.information ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+}

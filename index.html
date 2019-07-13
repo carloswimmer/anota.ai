@@ -14,7 +14,21 @@
 </head>
 
 <body>
-  <header>Anota.ai <i class="far fa-comment-dots"></i></header>
+  <header>Anota.ai 
+    <i class="far fa-comment-dots"></i>
+    <div class="to-the-right">
+      <i class="far fa-question-circle fa-lg" onmouseover="showInformation()"
+        onmouseout="hideInformation()"></i>
+    </div>
+    <div class="information">
+      <ul>
+        <li>Clique no microfone</li>
+        <li>Fale seu texto</li>
+        <li>Clique em copiar</li>
+        <li>Cole onde quiser</li>
+      </ul>
+    </div>
+  </header>
   <section>
     <div class="container content">
       <div class="alert alert-success" role="alert">
@@ -22,8 +36,8 @@
       </div>
       <div class="form-group">
         <label for="display" class="label">Campo de Leitura</label>
-        <textarea type="text" class="form-control" id="display" placeholder="Aqui mostra o que você tem a dizer" rows=10
-          cols=80></textarea>
+        <textarea type="text" class="form-control" id="display" placeholder="Aqui mostra o que você tem a dizer" 
+          rows=10 cols=80></textarea>
       </div>
       <footer>
         <div class="left">
