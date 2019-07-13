@@ -56,6 +56,9 @@ function showAlert (type, message) {
   notification.classList.add(`alert-${type}`)
   notification.style.opacity = '1'
   notification.innerHTML = message
+  setTimeout(() => {
+    notification.style.opacity = '0'
+  }, 6000);
 }
 
 function clearDisplay () {
