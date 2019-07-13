@@ -11,7 +11,7 @@ window.onload = function () {
     letsTakeNote()
     return
   }
-  showAlert('danger', 'Esse navegador não tem reconhecimento de voz')
+  showAlert('danger', 'Esse navegador não tem reconhecimento de voz. Tente no Chrome.')
   var controls = document.querySelectorAll('button')
   controls.forEach(item => item.setAttribute('disabled', true))
 }
