@@ -11,7 +11,7 @@ window.onload = function () {
     letsTakeNote()
     return
   }
-  showAlert('danger', 'Esse navegador não tem reconhecimento de voz. Tente no Chrome.')
+  showAlert('danger', 'Esse navegador não tem reconhecimento de voz.<br> Tente o Google Chrome.')
   var controls = document.querySelectorAll('button')
   controls.forEach(item => item.setAttribute('disabled', true))
 }
@@ -44,11 +44,15 @@ function toggleStartStop () {
     reset()
     return
   }
-  recognition.start ()
+  recognition.start()
   recognizing = true
   button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
   button.classList.toggle('btn-danger')
   notification.style.opacity = '0'
+  recognition.onspeechend = function () {
+    recognition.stop()
+    reset()
+  }
 }
 
 function showAlert (type, message) {
