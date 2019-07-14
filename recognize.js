@@ -1,6 +1,7 @@
 window.SpeechRecognition = window.webkitSpeechRecognition ||
   window.SpeechRecognition
-var notification = document.querySelector('.alert')
+var notification = document.querySelector('.notification')
+var alert = document.querySelector('.alert')
 var information = document.querySelector('.information')
 var recognizing
 var recognition = {}
@@ -48,7 +49,7 @@ function toggleStartStop () {
   recognizing = true
   button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
   button.classList.toggle('btn-danger')
-  notification.style.opacity = '0'
+  alert.style.opacity = '0'
   recognition.onspeechend = function () {
     recognition.stop()
     reset()
@@ -56,19 +57,37 @@ function toggleStartStop () {
 }
 
 function showAlert (type, message) {
-  notification.classList.remove(...['alert-success', 'alert-warning', 'alert-danger'])
-  notification.classList.add(`alert-${type}`)
-  notification.style.opacity = '1'
-  notification.innerHTML = message
+  alert.classList.remove(...['alert-success', 'alert-warning', 'alert-danger'])
+  alert.classList.add(`alert-${type}`)
+  alert.innerHTML = message
+  if (window.innerWidth < 768) {
+    notification.style.display = 'flex'
+    setTimeout(() => {
+      notification.style.opacity = '1'
+      alert.style.opacity = '1'
+    }, 100)
+  } else {
+    alert.style.opacity = '1'
+  }
   setTimeout(() => {
+    hideAlert()
+  }, 6000)    
+}
+
+function hideAlert () {
+  alert.style.opacity = '0'
+  if (window.innerWidth < 768) {
     notification.style.opacity = '0'
-  }, 6000);
+    setTimeout(() => {
+      notification.style.display = 'none'
+    }, 300)
+  }
 }
 
 function clearDisplay () {
   if (recognizing) toggleStartStop()
   display.value = ''
-  notification.style.opacity = '0'
+  hideAlert()
 }
 
 function copy () {

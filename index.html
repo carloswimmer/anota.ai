@@ -16,7 +16,7 @@
 <body>
   <header>Anota.ai 
     <i class="far fa-comment-dots"></i>
-    <div class="to-the-right">
+    <div class="question-button">
       <i class="far fa-question-circle fa-lg" onmouseover="showInformation()"
         onmouseout="hideInformation()"></i>
     </div>
@@ -31,8 +31,10 @@
   </header>
   <section>
     <div class="container content">
-      <div class="alert alert-success" role="alert">
-        Sucesso! Texto copiado para a área de trabalho.
+      <div class="notification" onclick="hideAlert()">
+        <div class="alert alert-success" role="alert">
+          Sucesso! Texto copiado para a área de trabalho.
+        </div>
       </div>
       <div class="form-group">
         <label for="display" class="label">Campo de Leitura</label>
