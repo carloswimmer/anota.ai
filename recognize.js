@@ -50,10 +50,6 @@ function toggleStartStop () {
   button.innerHTML = '<i class="fas fa-microphone-slash fa-lg"></i>'
   button.classList.toggle('btn-danger')
   alert.style.opacity = '0'
-  recognition.onspeechend = function () {
-    recognition.stop()
-    reset()
-  }
 }
 
 function showAlert (type, message) {
