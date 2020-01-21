@@ -8,6 +8,9 @@ It was built with Vanilla JavaScript, and intend to use the voice recognition fe
 * It will understand the idiom that is configurated in your browser.
 * Depending on your browser version, it will understanding "comma", "question mark", "semicolon", etc as punctuation mark. 
 
+### Anota.ai Screen
+![Anota.ai Screen](https://raw.githubusercontent.com/carloswimmer/anota.ai/master/screen_shots/anota_ai.jpg)
+
 ## let's see it working
 
 [carloswimmer.github.io/anota.ai](https://carloswimmer.github.io/anota.ai/)
