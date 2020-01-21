@@ -4,7 +4,7 @@ A simple textarea that recognizes your speech when you click the button and copy
 
 ## Details
 
-It was built with Vanilla JavaScript, and intend to use the voice recognition feature of browser Chrome to make easier and agile to take notes and have ideas in the same time. 
+It was built with Vanilla JavaScript, and intend to use the voice recognition feature of browser Chrome to make it easier and agile to take notes and have ideas in the same time. 
 * It will understand the idiom that is configurated in your browser.
 * Depending on your browser version, it will understanding "comma", "question mark", "semicolon", etc as punctuation mark. 
 
