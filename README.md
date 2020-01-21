@@ -1,4 +1,4 @@
-# voice-recognition
+# Anota.ai
 
 A simple textarea that recognizes your speech when you click the button and copy to clipboard.
 
